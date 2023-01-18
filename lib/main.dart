@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:stw/stopwatchscreen.dart';
+import 'package:stw/stopwatch_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:stw/timeservice.dart';
+import 'package:stw/time_service.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<TimerService>(
     create: (_) => TimerService(),
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false, home: StopwatchScreen());
   }
 }

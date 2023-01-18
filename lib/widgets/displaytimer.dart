@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stw/timeservice.dart';
+import 'package:stw/time_service.dart';
 import 'package:stw/utils.dart';
 import 'package:provider/provider.dart';
 
@@ -20,48 +20,57 @@ class _DisplayTimerState extends State<DisplayTimer> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width / 4,
               height: 170,
               child: Center(
-                child: Provider.of<TimerService>(context, listen: false)
-                    .changehoursunit(),
+                child: Text(
+                  Provider.of<TimerService>(context, listen: false)
+                      .changeHoursUnit(provider.startTime),
+                  style: textStyle(30, Colors.black, FontWeight.bold),
+                ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(
               ":",
               style: textStyle(30, Colors.black, FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width / 4,
               height: 170,
               child: Center(
-                child: Provider.of<TimerService>(context, listen: false)
-                    .changeminutesunit(),
+                child: Text(
+                  Provider.of<TimerService>(context, listen: false)
+                      .changeMinutesUnit(provider.startTime),
+                  style: textStyle(30, Colors.black, FontWeight.bold),
+                ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
             Text(
               ":",
               style: textStyle(30, Colors.black, FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width / 4,
               height: 170,
               child: Center(
-                child: Provider.of<TimerService>(context, listen: false)
-                    .changesecondsunit(),
+                child: Text(
+                  Provider.of<TimerService>(context, listen: false)
+                      .changeSecondsUnit(provider.startTime),
+                  style: textStyle(30, Colors.black, FontWeight.bold),
+                ),
               ),
             ),
           ],

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stw/timeservice.dart';
+import 'package:stw/widgets/description_text.dart';
 import 'package:stw/widgets/displaytimer.dart';
 import 'package:stw/widgets/timecontroller.dart';
-import 'package:stw/widgets/timeresult.dart';
-import 'package:provider/provider.dart';
-import 'utils.dart';
 
 class StopwatchScreen extends StatelessWidget {
   const StopwatchScreen({super.key});
@@ -16,15 +13,19 @@ class StopwatchScreen extends StatelessWidget {
         child: Container(
           alignment: Alignment.center,
           child: Column(
-            children: [
+            children: const [
               SizedBox(
                 height: 200,
               ),
               DisplayTimer(),
               SizedBox(
-                height: 40,
+                height: 5,
               ),
               TimeController(),
+              SizedBox(
+                height: 50,
+              ),
+              DescriptionText(),
             ],
           ),
         ),
