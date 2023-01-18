@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:stw/utils.dart';
 import 'package:stw/widgets/fulltime_popup.dart';
 
 class TimerService extends ChangeNotifier {
